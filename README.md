@@ -17,12 +17,17 @@ Kubernetes
                    sudo apt-get install -y kubelet kubeadm kubectl
                    sudo apt-mark hold kubelet kubeadm kubectl
 
+                   Disable Linux Swap
+
+                   sudo swapoff -a && sudo sed -i '/swap/d' /etc/fstab
+
                    --->>>> https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
 
                    sudo kubeadm init --pod-network-cidr=10.244.0.0/16
               After this command you will get an output that you will run on the worker nodes to join them to the cluster and will look this bellow one.    
               
-
+                  kubeadm join 192.168.1.11:6443 --token 1713v3.43l75dvs3ap2gnf6 \
+        --discovery-token-ca-cert-hash sha256:e674c15383aa2d601847beccfe87f2fa401325b92ecb8c47f555228519177f57
 
 
                    mkdir -p $HOME/.kube
@@ -46,6 +51,10 @@ Kubernetes
                    sudo apt update
                    sudo apt-get install -y kubelet kubeadm kubectl
                    sudo apt-mark hold kubelet kubeadm kubectl
+
+                   Disable Linux Swap
+
+                   sudo swapoff -a && sudo sed -i '/swap/d' /etc/fstab
 
              Run the command to join this node to the cluster 
 
