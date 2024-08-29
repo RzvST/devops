@@ -24,7 +24,7 @@ sudo vim /etc/hosts
 
 Disable swap : 
 
-sudo wim /etc/fstab 
+sudo vim /etc/fstab 
 
 Comment the line with swapp
 
@@ -126,7 +126,7 @@ sudo vim /etc/hosts
 
 Disable swap : 
 
-sudo wim /etc/fstab 
+sudo vim /etc/fstab 
 
 Comment the line with swapp
 
