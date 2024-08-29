@@ -2,7 +2,7 @@ DevOps Infrastructure project
 
 Machines and environment configuration. 
 
-Kubernetes 
+**Kubernetes **
 
 **Master Node**
 
@@ -195,6 +195,45 @@ Run the join command :
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
+**SonarQube**
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Updates : sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/RzvST/mediaserver/main/scripts/serverupdate.sh)"
+Docker : sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/RzvST/mediaserver/main/scripts/dockersetup.sh)"
+Sonarqube : sudo docker run -d --name sonar -p 9000:9000 sonarqube:lts-community --restart=always
+
+SonarQube is accessible ip:9000
+
+User : admin
+Pass: admin
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+**Nexus**
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Updates : sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/RzvST/mediaserver/main/scripts/serverupdate.sh)"
+Docker : sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/RzvST/mediaserver/main/scripts/dockersetup.sh)"
+Nexus : sudo docker run -d --name nexus -p 8081:8081 sonatype/nexus3:latest --restart=always
+
+SonarQube is accessible ip:8081
+
+User :admin 
+
+For the password : 
+
+////////////////////////////////////////
+docker ps
+docker exec -it <container_ID> /bin/bash
+cat admin.password
+exit
+
+////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                   
                    
