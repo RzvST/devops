@@ -17,6 +17,16 @@ Kubernetes
                    sudo apt-get install -y kubelet kubeadm kubectl
                    sudo apt-mark hold kubelet kubeadm kubectl
 
+///////// uninstall and purge of kubernetes ///////////
+
+kubeadm reset
+sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*   
+sudo apt-get autoremove  
+sudo rm -rf ~/.kube
+
+
+//////////////////////////////////////////////////////
+
                    Disable Linux Swap
 
                    sudo swapoff -a && sudo sed -i '/swap/d' /etc/fstab
