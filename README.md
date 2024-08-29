@@ -24,8 +24,9 @@ sudo vim /etc/hosts
 
 Disable swap : 
 
-sudo swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo wim /etc/fstab 
+
+Comment the line with swapp
 
 Kernel parameters :
 
@@ -125,8 +126,9 @@ sudo vim /etc/hosts
 
 Disable swap : 
 
-sudo swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+sudo wim /etc/fstab 
+
+Comment the line with swapp
 
 Kernel parameters :
 
