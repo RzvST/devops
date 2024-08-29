@@ -93,7 +93,7 @@ After this command you will get an output that you will run on the worker nodes 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Making home folders
+Making home folders after the nodes are joined
 
 ////////////////////////////////////////////////////////
 
@@ -101,12 +101,14 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-After this command you will get an output that you will run on the worker nodes to join them to the cluster and will look this bellow one.
+////////////////////////////////////////////////////////
+
+Applying networking for nodes
 
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
                    
 
-**Slaves Nodes **
+**Slaves Nodes**
 
 Updates : sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/RzvST/mediaserver/main/scripts/serverupdate.sh)"
 Update host files : 
